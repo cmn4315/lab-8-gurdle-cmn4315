@@ -1,0 +1,5 @@
+/out/
+/.idea/workspace.xml
+/._*
+/.DS_Store
+/.idea/libraries/*.xml

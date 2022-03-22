@@ -1,0 +1,17 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="Gurdle HELLO" type="Application" factoryName="Application">
+    <option name="INCLUDE_PROVIDED_SCOPE" value="true" />
+    <option name="MAIN_CLASS_NAME" value="gurdle.gui.Gurdle" />
+    <module name="cs2-20215-lab8-gurdle" />
+    <option name="PROGRAM_PARAMETERS" value="HELLO" />
+    <extension name="coverage">
+      <pattern>
+        <option name="PATTERN" value="gurdle.gui.*" />
+        <option name="ENABLED" value="true" />
+      </pattern>
+    </extension>
+    <method v="2">
+      <option name="Make" enabled="true" />
+    </method>
+  </configuration>
+</component>
