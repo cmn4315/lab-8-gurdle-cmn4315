@@ -300,6 +300,22 @@ public class Model {
          *     this.charPos = guess.length(); // => a word has been entered.
          *     this.confirmGuess(); // <-- checks the guess
          */
+        GameState state = this.gameState;
+        if (state.equals(GameState.ONGOING)){
+            if (guess.length() != WORD_SIZE){
+                this.gameState = GameState.ILLEGAL_WORD;
+                notifyObservers(Model.STATE_MSGS.get(this.gameState));
+                this.gameState = GameState.ONGOING;
+            } else {
+                for (int i = 0; i < guess.length(); ++i){
+                    guessLetters[this.attemptNum][i].setChar(guess.charAt(i));
+                    this.lettersUsed.add(guess.charAt(i));
+                }
+                this.charPos = guess.length(); // => a word has been entered.
+                this.confirmGuess(); // <-- checks the guess
+            }
+
+        }
     }
 
     // ******** Queries, for View ********
